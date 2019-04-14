@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Owl Eye</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="base.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    </head>
+    
+    
+    <!-- Thinking of making a way to change the css of this website to a barebones them e - in the click of a button - code projects link -->
+    <!-- create .gifs with a transparent background? like ginlane website-->
+    <!-- create shading under buttons -->
+    <!-- create a game with random chances -->
+    <!-- create a game that pulls info from another site -- like maybe horoscope ish -->
+    
+    
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>      
+            <!-- Don't forget to add shading under the header-->
+            <h1>
+                <img src="01 IMAGES/PlaceHolderLogo3.svg"> 
+            </h1>
+            <h2>The Owl Eye Collective</h2>
+                <nav class='main-nav'>
+                    <a href="home.html">Home</a>
+                    <!-- At some point we want to add a dropdown menu and create sub-categories: video / web development -->
+                    <a href="programs.html">Apps</a>
+                
+                <span class="video-container">
+                    <a class="video" href="video.html">Video</a>
+                    <div class="video-menu">
+                        <nav>
+                            <a href='branded.html'>Branded</a>
+                            <a href='documentary.html'>Documentary</a>
+                            <a href='musicvideo.html'>Music Video</a>
+                        </nav>
+                    </div>
+                </span>
+
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a href="#" class="ham-menu-click">
+                    <img src="01 IMAGES/menu-icon.svg">
+                </a>
+        </header>
+        <!-- We are going to make a menu that pops out when you click on a hamburger icon -->
+        <section class="flyout-menu">
+                <nav>
+                    <a href="home.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+        </section>
+
+        <!-- <div class="video-menu">
+            <nav>
+                <a href='branded.html'>Branded</a>
+                <a href='documentary.html'>Documentary</a>
+                <a href='musicvideo.html'>Music Video</a>
+            </nav>
+        </div> -->
+
+        <div class="container">
+            <section class="mission-statement">
+                <!-- Brand statement, intro, welcome to the page, how does this impact the story of your website -->
+                <h3>The Owl Way</h3>
+                    <p>
+                        We are a group of passionate filmmakers who offer full service video production and dynamic storytelling skills 
+                        that are matched only by the gods.
+                    </p>
+                <!-- insert video box - reel - maybe allow for navigation to another video -->
+                <div class="video-intro">
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jF3s__EcQNA?modestbranding=1" frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <video src="02 VIDEO/Showreel_2016.mp4" controls></video>
+                </div>
+                <p>Showreel 2016</p>
+                <!-- Images below here / add a flexbox / 3.3.19 - maybe make the pics below transition- 
+                also have arrows (for navigation) pop up when you float over them -->
+                    
+            <div class="container2">
+                    <h3> Featured Photography </h3>
+                    <p> Because why not </p>
+                <div class="slideshow">
+                        
+                    <span class="outer-arrows">
+                        <span class="arrows">
+                            <a href="" class="arrow-back">
+                                <img src="01 IMAGES/Left_Arrow_1.svg">
+                            </a> 
+                            <a href="" class="arrow-forward">
+                                <img src="01 IMAGES/Right_Arrow_2.svg">
+                            </a>    
+                        </span>  
+                    </span>
+                    
+                    <div class="slides">
+                        <div class="slide1"></div>
+                        <div class="slide2"></div>
+                        <div class="slide3"></div>
+                        <div class="slide4"></div>
+                        <div class="slide5"></div>
+                        <div class="slide6"></div>
+                    </div>
+                    
+                </div>
+            </div> 
+            </section>
+        </div>
+          
+        <!-- Here we are going to create a lightbox for pictures -- hit escape 
+            get rid of background as well - change pictures using arrow keys -->
+            <div class="lightbox">
+                <div class="lightbox-background">
+                    
+                    <span class="x">
+                        <img src="01 IMAGES/X.svg">
+                    </span>
+                        
+                    <span class="arrows-lightbox">
+                        <span class="inner-arrows-lightbox">
+                            <a href="" class="arrow-back-lightbox">
+                                <img src="01 IMAGES/Left_ArrowW.svg">
+                             </a> 
+                            <a href="" class="arrow-forward-lightbox">
+                                <img src="01 IMAGES/Right_ArrowW.svg">
+                            </a> 
+                        </span>   
+                    </span>   
+
+                </div>
+                                   
+                        <div class="lightbox-content"></div>
+                      
+            </div>
+            
+            <!-- Javascript Based Game Here -->
+            <section>
+                
+            </section>
+
+     <footer>
+         <img src="01 IMAGES/PlaceHolderLogo3.svg"> <!-- Smaller version of brand - think the super-hi fixed header of a smiley --> 
+        <nav></nav>
+    </footer>
+
+        <!--- we want a flexbox within a container that can slide accross the page revealing new images -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="slideshow.js"></script>
+        <script type="text/javascript" src="flyout-menu-PLUS.js"></script>
+    </body>
+</html>

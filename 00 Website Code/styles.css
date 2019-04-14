@@ -1,0 +1,439 @@
+body {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: border .1s ease-in;
+}
+
+header nav a:hover {
+    border-bottom: 1px solid #000;
+}
+
+header {
+    /* I turned overflow off because it was affecting
+    the pop-out video menu: it was hiding it */
+    /* overflow: hidden; */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 1.9px 2.9px rgba(180, 180, 180, 0.438);
+}
+
+.expand {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+}
+
+header h1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    width: 50px;   
+    height: 50px; 
+}
+
+header h2 {
+    display: inline-block;
+    font-size: 32px;
+    padding-top: 5px;
+}
+
+.main-nav {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 12px;
+}
+
+
+.video-menu {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    background-color: #fff;
+    width: 105px;
+    min-height: 70px;
+    right: 95px;
+    top: 15px; 
+    font-size: 12px;
+    box-shadow: 0px 0px 7px rgba(180, 180, 180, 0.438);
+}
+
+
+.video-container:hover .video-menu {
+    display: block;
+}
+
+/* had to add hover here because the changes for the a
+tag wouldn't register otherwise */
+
+.video-container:hover .video-menu a {
+    padding-top: 5px;
+    display: inline-block;
+}
+
+/* FLYOUT MENU IN PROGRESS */
+
+
+.flyout-menu {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    right: 0;
+    transform: translateX(100%);
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all .2s ease-in-out;
+    
+}
+
+.flyout-menu-out {
+    transform: translateX(0); 
+}
+
+
+.flyout-menu nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 32px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 25%;
+    right: 50%;
+    
+}
+
+.flyout-menu nav a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.ham-menu-click {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    header nav {
+        display: none;
+    }
+
+    .ham-menu-click {
+        position: absolute;
+        display: inline-block;
+        top: 14px;
+        right: 20px;
+        z-index: 100;
+
+    }
+
+    
+}
+
+/* FLYOUT MENU IN PROGRESS */
+
+
+
+
+.container {
+    max-width: 1250px;
+    min-height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mission-statement {
+    overflow: hidden;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.mission-statement h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.video-intro {
+    padding: 10px;
+}
+
+.video-intro video {
+    padding: 1px;
+    margin-top: 50px;
+    max-width: 800px;
+    height: auto;
+    border: solid .1px #fff;
+    box-shadow: 0px 0px 7px rgba(180, 180, 180, 0.438);
+}
+
+.container2 {
+    padding-bottom: 25px;
+    padding-top: 80px;
+    text-align: left;
+}
+
+.slideshow {
+    height: 264px;
+    position: relative;
+    max-width: 1250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.slides {
+    position: absolute;
+    width: 2500px;
+    overflow: hidden;
+    padding-bottom: 50px;
+    left: 0;
+    top: 0;
+    transition: left 1s ease;
+}
+
+
+.slides div {
+    margin-right: 5px;
+    float: left;
+    width: 400px;
+    height: 264px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1 {
+    background-image: url("01 IMAGES/Harley_Web.jpg");
+}
+
+.slide2 {
+    background-image: url("01 IMAGES/PGrabs_Web.JPG");
+}
+
+.slide3 {
+    background-image: url("01 IMAGES/Truck_Web.jpg");
+}
+
+.slide4 {
+    background-image: url("01 IMAGES/Slideshow/Cuba_Pontiac.jpg");
+}
+
+.slide5 {
+    background-image: url("01 IMAGES/Slideshow/Cuba_Street.jpg");
+}
+
+.slide6 {
+    background-image: url("01 IMAGES/Slideshow/Cuba_Taxi.jpg");
+}
+
+
+
+.outer-arrows {
+    position: absolute;
+    width: 100%;
+    top: 91%;
+    left: 0;
+}
+
+.arrows {
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.arrows img {
+    position: relative;
+    z-index: 2;
+    opacity: .6;
+    width: 50px;
+    height: 100%;
+    transition: opacity .1s ease-in;
+}
+
+/* Increased opacity when user mouse is on an arrow */
+.arrows img:hover {
+    opacity: 1;
+}
+
+/* Show arrows when users mouse is over slideshow */
+.slideshow:hover .arrows {
+    opacity: 1;
+}
+
+.displayOff {
+    opacity: 0;
+}
+
+
+.arrows-lightbox {
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    bottom: 5%;
+    left: 50px;
+    right: 50px;
+    max-width: 1250px;
+}
+
+.inner-arrows-lightbox {
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.arrows-lightbox a {
+    border-bottom: none;
+}
+
+.inner-arrows-lightbox img {
+    opacity: .5;
+    width: 50px;
+    height: 100%;
+    transition: opacity .1s ease-in;
+}
+
+/* Increased opacity when user mouse is on an arrow */
+.inner-arrows-lightbox img:hover {
+    opacity: 1;
+    z-index: 50;
+}
+
+/* Show arrows when users mouse is in browser */
+.lightbox:hover .inner-arrows-lightbox {
+    opacity: 1;
+}
+
+a.arrow-forward-lightbox  {
+    opacity: 1;
+    z-index: 50;
+}
+
+.arrow-back-lightbox:hover {
+    opacity: 1;
+}
+
+
+
+.x {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.x:hover img {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.x img {
+    width: 25px;
+    height: 25px;
+    opacity: .8;
+}
+
+.lightbox {
+    display: none;
+}
+
+.lightbox-background {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+}
+
+.lightbox-content {
+    z-index: 5;
+    position: fixed;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 667px;
+    background-repeat: no-repeat;
+    transition: left 1s ease-in;
+}
+
+.lightbox-contentR {
+    z-index: 5;
+    position: fixed;
+    background-color: black;
+    top: 50%;
+    left: 200%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 667px;
+    background-repeat: no-repeat;
+    transition: left 1s ease-in;
+}
+
+
+.lightbox-contentL {
+    z-index: 5;
+    position: fixed;
+    background-color: black;
+    top: 50%;
+    left: -200%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 667px;
+    background-repeat: no-repeat;
+    transition: left 1s ease-in;
+}
+
+
+.lightbox-transform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .8s ease-in;
+}
+
+
+footer img {
+    padding: 5px;
+    width: 50px;   
+    height: 50px; 
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    justify-content: center;
+    box-shadow: 0 -1.9px 2.9px rgba(180, 180, 180, 0.438);
+}
+

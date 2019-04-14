@@ -14,7 +14,11 @@ const totalSlides = 6 / 2
 //ADD AN IF STATEMENT THAT RESETS SCROLL RIGHT IF
 //CLICKING ON SCROLL LEFT AND VICE VERSA
 
-// We are doing this because the slideshow starts at the beginning
+/* 4/14/19 - I've learned more about best practices when using variables within 
+the global scope. If were to re-write/update this bit of functionality, I'd probably
+try to use less global variables. */
+
+// We are doing this because when we load the page the slideshow should start at the beginning
 $('a.arrow-back').addClass('displayOff')
 
 let nextSlideR = function() { 
@@ -83,8 +87,6 @@ let hideArrowNav = () => {
 }
 
 
-// I NEED TO FIX THE LIGHTBOX SCROLL
-
 // opens lightbox and assigns content based on the div clicked
 $('.slides div').on('click', function(currentImage) {
     // Picks up index from (.slides div) based on which one was clicked
@@ -144,8 +146,7 @@ let createSlideL = function() {
 $('a.arrow-forward-lightbox').on('click', function(e) {
     if (slideIndex + 1 > totalSlides * 2) {
         console.log('End of Slideshow')
-    // here I'm trying to check if this is true change the class from right 
-    // to middle (lightbox-content) and move it to the left
+    // here I'm trying to check if we are on the last slide. 
     } else {
         createSlideR()
     }

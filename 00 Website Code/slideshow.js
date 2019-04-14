@@ -21,7 +21,7 @@ try to use less global variables. */
 // We are doing this because when we load the page the slideshow should start at the beginning
 $('a.arrow-back').addClass('displayOff')
 
-let nextSlideR = function() { 
+const nextSlideR = function() { 
     $('a.arrow-back').removeClass('displayOff')
     scrollN = scrollN + 1
     if (scrollN >= totalSlides){ 
@@ -34,7 +34,7 @@ let nextSlideR = function() {
     }
 }
 
-let nextSlideL = function() {   
+const nextSlideL = function() {   
     $('a.arrow-forward').removeClass('displayOff')
     scrollN = scrollN - 1
     
@@ -66,7 +66,7 @@ const arraPics = [$('.slide1'), $('.slide2'), $('.slide3'), $('.slide4'), $('.sl
 let slideIndex = 0
 
 
-let hideArrowNav = () => {
+const hideArrowNav = () => {
     $('.arrow-forward-lightbox').show()
     $('.arrow-back-lightbox').show()
     $('.inner-arrows-lightbox').css('justify-content', 'space-between')
@@ -101,7 +101,7 @@ $('.slides div').on('click', function(currentImage) {
 })
 
 // Exit out of lightbox
-let exitLight = () => {
+const exitLight = () => {
     $('.lightbox').fadeOut(500)
     slideIndex = 0
 }
@@ -112,7 +112,7 @@ $('.x').on('click', function(){
 
 // Exit out of lightbox with esc key
 $('body').on('keydown', function (e) {
-    var keyC = e.keyCode
+    const keyC = e.keyCode
     if (keyC == 27) {
         exitLight()  
         slideIndex = 0
@@ -120,7 +120,7 @@ $('body').on('keydown', function (e) {
 })
 
 // Create new slide right
-let createSlideR = function() {
+const createSlideR = function() {
     let innerSlideIndex = slideIndex + 1
     let insertBackground = $('.slide' + innerSlideIndex).css('background-image')
     if (slideIndex < $('.slides div').length) {
@@ -131,7 +131,7 @@ let createSlideR = function() {
 }
 
 // Create new slide left
-let createSlideL = function() { 
+const createSlideL = function() { 
     let innerSlideIndex = slideIndex - 1
     let insertBackground = $('.slide' + innerSlideIndex).css('background-image')
     if (slideIndex > 1) {

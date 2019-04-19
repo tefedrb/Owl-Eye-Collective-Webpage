@@ -1,6 +1,6 @@
-//This just gets the slide width (which might vary 
-//when I add responsiveness to 
-//the site using @media width in css)
+/* This just gets the slide width (which might vary 
+when I add responsiveness to 
+the site using @media width in css) */
 const getSlideWidth = $('.slides div').css('width')
 //this turns the slide width into a negative number
 const slideWidth = parseInt(getSlideWidth, 10)
@@ -11,14 +11,12 @@ let scrollN = 0
 // Total Slide Count divided by 2 - EASY UPDATE 
 const totalSlides = 6 / 2
 
-//ADD AN IF STATEMENT THAT RESETS SCROLL RIGHT IF
-//CLICKING ON SCROLL LEFT AND VICE VERSA
-
 /* 4/14/19 - I've learned more about best practices when using variables within 
 the global scope. If were to re-write/update this bit of functionality, I'd probably
 try to use less global variables. */
 
-// We are doing this because when we load the page the slideshow should start at the beginning
+/* We are doing this because when we load the page the slideshow 
+should start at the beginning */
 $('a.arrow-back').addClass('displayOff')
 
 const nextSlideR = function() { 

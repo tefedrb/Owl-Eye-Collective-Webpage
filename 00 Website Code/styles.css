@@ -102,8 +102,7 @@ tag wouldn't register otherwise */
     height: 100vh;
     width: 300px;
     background-color: rgba(255, 255, 255, 0.8);
-    transition: all .2s ease-in-out;
-    
+    transition: all .2s ease-in-out;  
 }
 
 .flyout-menu-out {
@@ -121,8 +120,7 @@ tag wouldn't register otherwise */
     transform: translateY(-50%);
     width: 100%;
     left: 25%;
-    right: 50%;
-    
+    right: 50%;  
 }
 
 .flyout-menu nav a {
@@ -133,6 +131,7 @@ tag wouldn't register otherwise */
 .ham-menu-click {
     display: none;
 }
+
 
 @media (max-width: 1050px) {
     header nav {
@@ -145,10 +144,7 @@ tag wouldn't register otherwise */
         top: 14px;
         right: 20px;
         z-index: 100;
-
-    }
-
-    
+    }   
 }
 
 /* FLYOUT MENU IN PROGRESS */
@@ -337,8 +333,6 @@ a.arrow-forward-lightbox  {
 .arrow-back-lightbox:hover {
     opacity: 1;
 }
-
-
 
 .x {
     position: absolute;

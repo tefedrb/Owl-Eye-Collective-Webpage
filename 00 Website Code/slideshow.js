@@ -58,11 +58,7 @@ $('.arrow-back').on('click', function(e) {
 })
 
 
-
-
-const arraPics = [$('.slide1'), $('.slide2'), $('.slide3'), $('.slide4'), $('.slide5'), $('.slide6')]
 let slideIndex = 0
-
 
 const hideArrowNav = () => {
     $('.arrow-forward-lightbox').show()
@@ -98,6 +94,7 @@ $('.slides div').on('click', function(currentImage) {
     currentImage.preventDefault()
 })
 
+
 // Exit out of lightbox
 const exitLight = () => {
     $('.lightbox').fadeOut(500)
@@ -107,6 +104,7 @@ const exitLight = () => {
 $('.x').on('click', function(){
     exitLight()
 })
+
 
 // Exit out of lightbox with esc key
 $('body').on('keydown', function (e) {
